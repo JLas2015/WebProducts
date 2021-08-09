@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Computer",
+      "price": 1850,
+      "quantity": 350,
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Printer",
+      "price": 350,
+      "quantity": 125,
+      "selected": false,
+      "available": false
+    },
+    {
+      "id": 3,
+      "name": "Headphone",
+      "price": 150,
+      "quantity": 199,
+      "selected": false,
+      "available": true
+    },
+    {
+      "id": 4,
+      "name": "Smartphone",
+      "price": 1230,
+      "quantity": 177,
+      "selected": false,
+      "available": true
+    },
+    {
+      "id": 5,
+      "name": "Charger",
+      "price": 99,
+      "quantity": 255,
+      "selected": false,
+      "available": true
+    },
+    {
+      "id": 6,
+      "name": "IPad",
+      "price": 279,
+      "quantity": 595,
+      "selected": true,
+      "available": true
+    }
+  ]
+}
