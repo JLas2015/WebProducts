@@ -53,4 +53,26 @@ export class ProductsComponent implements OnInit {
                           catchError(error => of({dataState: DataStateEnum.ERROR, errorMessage: error.message}))
                         );
   }
+
+  onSearch(dataForm: any){
+    this.products$ = this.pService.searchProducts(dataForm.keyword)
+                        .pipe(
+                          map((data) => ({dataState: DataStateEnum.LOADED, data: data})),
+                          startWith({dataState: DataStateEnum.LOADING}),
+                          catchError(error => of({dataState: DataStateEnum.ERROR, errorMessage: error.message}))
+                        );
+  }
+
+  onSelect(product: Product){
+    this.pService.selectProduct(product).subscribe();
+  }
+
+  onDelete(product: Product){
+    let deleteConfirm = `Do you really want to delete the ${product.name} product`;
+    if(confirm(deleteConfirm)){
+      this.pService.deleteProduct(product).subscribe(() => {
+        this.getAllProducts();
+      });
+    }
+  }
 }
