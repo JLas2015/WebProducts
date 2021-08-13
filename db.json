@@ -4,7 +4,15 @@
       "id": 1,
       "name": "Computer",
       "price": 1850,
-      "quantity": 350,
+      "quantity": "360",
+      "selected": true,
+      "available": true
+    },
+    {
+      "id": 2,
+      "name": "Smartphone",
+      "price": "1100",
+      "quantity": "55",
       "selected": true,
       "available": true
     }

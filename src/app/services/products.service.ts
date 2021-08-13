@@ -37,8 +37,23 @@ export class ProductsService {
     return this.http.put<Product>(`${host}/products/${product.id}`, product);
   }
 
+  getProductById(pid: number): Observable<Product>{
+    let host = environment.host;
+    return this.http.get<Product>(`${host}/products/${pid}`);
+  }
+
   deleteProduct(product: Product): Observable<void> {
     let host = environment.host;
     return this.http.delete<void>(`${host}/products/${product.id}`);
+  }
+
+  saveProduct(product: Product): Observable<Product>{
+    let host = environment.host;
+    return this.http.post<Product>(`${host}/products`, product);
+  }
+
+  editProduct(product: Product): Observable<Product>{
+    let host = environment.host;
+    return this.http.put<Product>(`${host}/products/${product.id}`, product);
   }
 }

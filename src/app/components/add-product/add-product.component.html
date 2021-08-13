@@ -1,0 +1,34 @@
+<div class="container overflow-hidden p-3 mt-4 shadow-lg p-3 mb-5 bg-white rounded">
+    <form [formGroup]="productFG">
+        <div class="form-group mt-4">
+            <label for="" class="form-label mb-2">Name</label>
+            <input type="text" class="form-control" formControlName="name" [ngClass]="{'is-invalid':submitted && productFG.controls.name.errors}"/>
+            <div *ngIf="submitted && productFG.controls.name.errors" class="invalid-feedback">
+                <div *ngIf="productFG.controls.name.errors.required">Name is required</div>
+            </div>
+        </div>
+        <div class="form-group mt-4">
+            <label for="pr" class="form-label mb-2">Price</label>
+            <input type="text" class="form-control" id="pr" formControlName="price" [ngClass]="{'is-invalid':submitted && productFG.controls.price.errors}" />
+            <div *ngIf="submitted && productFG.controls.price.errors" class="invalid-feedback">
+                <div *ngIf="productFG.controls.price.errors.required">Price is required</div>
+            </div>
+        </div>
+        <div class="form-group mt-4">
+            <label for="qn" class="form-label mb-2">Quantity</label>
+            <input type="text" id="qn" class="form-control" formControlName="quantity" [ngClass]="{'is-invalid':submitted && productFG.controls.quantity.errors}" />
+            <div *ngIf="submitted && productFG.controls.quantity.errors" class="invalid-feedback">
+                <div *ngIf="productFG.controls.quantity.errors.required">Quantity is required</div>
+            </div>
+        </div>
+        <div class="form-group mt-4">
+            <label for="sel" class="form-check-label mb-2">Selected</label>
+            <input type="checkbox" class="form-check" id="sel" formControlName="selected" />
+        </div>
+        <div class="form-group mt-4">
+            <label for="av" class="form-check-label mb-2">Available</label>
+            <input type="checkbox" id="av" class="form-check" formControlName="available" />
+        </div>
+        <button class="btn btn-success float-end" (click)="onSaveProduct()">Save <span class="fa fa-save"></span></button>
+    </form>
+</div>

@@ -8,20 +8,24 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ProductsComponent } from './components/products/products.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddProductComponent } from './components/add-product/add-product.component';
+import { EditProductComponent } from './components/edit-product/edit-product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    AddProductComponent,
     NavBarComponent,
     ProductsComponent,
-    HomeComponent
+    EditProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
