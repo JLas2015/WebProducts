@@ -1,0 +1,30 @@
+<tr class="px-3">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.quantity}}</td>
+    <td [ngClass]="product.selected? 'text-success': 'text-danger'"><span class="fa fa-check-circle h5"></span></td>
+    <td class="text-info"><span class="fa h5" [ngClass]="product.available? 'fa-thumbs-up': 'fa-thumbs-down'"></span>
+    </td>
+    <td>
+        <button (click)="onSelect(product)" [ngClass]="product.selected? 'text-warning': 'text-success'"
+            class="btn btn-sm">
+            <span class="fa fa-hand-pointer-o h5" title="Select product"></span>
+        </button>
+    </td>
+    <td>
+        <button (click)="onSetAvailable(product)" class="btn btn-sm">
+            <span class="fa fa-key h5" [ngClass]="product.available? 'text-danger': 'text-success'"></span>
+        </button>
+    </td>
+    <td>
+        <button (click)="onEditProduct(product)" class="btn btn-sm btn-outline-info ms-2 ml-2">
+            <span class="fa fa-edit"></span>
+        </button>
+    </td>
+    <td>
+        <button (click)="onDelete(product)" class="btn btn-sm btn-danger">
+            <span class="fa fa-trash-o"></span>
+        </button>
+    </td>
+</tr>

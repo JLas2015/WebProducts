@@ -56,4 +56,10 @@ export class ProductsService {
     let host = environment.host;
     return this.http.put<Product>(`${host}/products/${product.id}`, product);
   }
+
+  setAvailaibility(product: Product){    
+    let host = environment.host;
+    product.available = !product.available;
+    return this.http.put<Product>(`${host}/products/${product.id}`, product);
+  }
 }

@@ -4,17 +4,25 @@
       "id": 1,
       "name": "Computer",
       "price": 1850,
-      "quantity": "360",
-      "selected": true,
+      "quantity": "363",
+      "selected": false,
       "available": true
     },
     {
       "id": 2,
       "name": "Smartphone",
       "price": "1100",
-      "quantity": "55",
+      "quantity": "101",
       "selected": true,
-      "available": true
+      "available": false
+    },
+    {
+      "name": "Charger",
+      "price": "29",
+      "quantity": "39",
+      "selected": true,
+      "available": true,
+      "id": 3
     }
   ]
 }
